@@ -1,5 +1,5 @@
 # final-project
-Redesign of www.qualitystonecountertop.com
+Redesign of www.qualitystonecountertops.com
 - qualitystonecountertop.com is a website owned by a local stone resourcing business
 - the website owner has requested my help in redesigning the site
 
