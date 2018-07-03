@@ -3,6 +3,9 @@ Redesign of www.qualitystonecountertops.com
 - qualitystonecountertop.com is a website owned by a local stone resourcing business
 - the website owner has requested my help in redesigning the site
 
+visit this link to see my capture of the original website
+https://docs.google.com/document/d/1DrxuCe78tj6hLMDCApHP82idyAehjftO-9DuU9Kj2f4/edit?usp=sharing
+
 - the site currently contains pages for:
 Home
 History
@@ -16,6 +19,9 @@ Stone
 Fabriction Shop
 
 Current page styling is minimal and functionality is limited to display only
+
+visit this mopups link to see my wireframes
+https://app.moqups.com/ryan.t.borja@gmail.com/zrmqcwWUPW/view
 
 Goals:
 - create a beautiful, modern layout for entire site
