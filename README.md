@@ -19,10 +19,12 @@ Current page styling is minimal and functionality is limited to display only
 
 Goals:
 - create a beautiful, modern layout for entire site
-- update content and render page content in a quick, efficient manor
+- allow website owner to easily update content 
+- render page content in a quick, efficient manor
 - add functionality to request calendar appointments online
 - add functionality to send emails to website owner
-- add ability for customer to see stone options in HD, to compare options, and to get   quotes on a standard build while visiting the web site 
+- add ability for customer to see stone options in HD, to compare options, and to get quotes on a standard packages while visiting the web site
+- add ability for customer to select stone options from a selection screen 
 
 USER STORIES: 
 - As a customer, I want to view this webiste easily from my cell phone
