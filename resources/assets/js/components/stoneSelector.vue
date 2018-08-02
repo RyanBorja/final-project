@@ -7,14 +7,14 @@
         </div>
         
         <div class="row justify-content-center">
-            <div class="col-md-12 col-md-offset-2">
-                <div class="card-columns">        
-                    <div class="card" v-for="stones in filteredStones"  :key="stones.name">
-                        <img class="card-img-top" :src="stones.path" alt="material image">
+            <div class="col-md-10 col-md-offset-2">
+                <div class="row justify-content-center">        
+                    <div class="card m-2" v-for="stones in filteredStones"  :key="stones.name" style="width: 30%;">
+                        <img class="card-img-top" :src="stones.path" alt="material image" style="max-height:160px; overflow:hidden;">
                         <div class="card-body">
                             <h5 class="card-title">{{ stones.name }}</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p v-if="stones.in_stock" class="card-text"><small class="text-muted">In Stock</small></p>
+                            <p v-else class="card-text"><small class="text-muted">On Order</small></p>
                         </div>
                     </div>
                 </div>

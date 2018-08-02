@@ -47437,49 +47437,51 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-12 col-md-offset-2" }, [
+      _c("div", { staticClass: "col-md-10 col-md-offset-2" }, [
         _c(
           "div",
-          { staticClass: "card-columns" },
+          { staticClass: "row justify-content-center" },
           _vm._l(_vm.filteredStones, function(stones) {
-            return _c("div", { key: stones.name, staticClass: "card" }, [
-              _c("img", {
-                staticClass: "card-img-top",
-                attrs: { src: stones.path, alt: "material image" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v(_vm._s(stones.name))
-                ]),
+            return _c(
+              "div",
+              {
+                key: stones.name,
+                staticClass: "card m-2",
+                staticStyle: { width: "30%" }
+              },
+              [
+                _c("img", {
+                  staticClass: "card-img-top",
+                  staticStyle: { "max-height": "160px", overflow: "hidden" },
+                  attrs: { src: stones.path, alt: "material image" }
+                }),
                 _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "This card has supporting text below as a natural lead-in to additional content."
-                  )
-                ]),
-                _vm._v(" "),
-                _vm._m(0, true)
-              ])
-            ])
+                _c("div", { staticClass: "card-body" }, [
+                  _c("h5", { staticClass: "card-title" }, [
+                    _vm._v(_vm._s(stones.name))
+                  ]),
+                  _vm._v(" "),
+                  stones.in_stock
+                    ? _c("p", { staticClass: "card-text" }, [
+                        _c("small", { staticClass: "text-muted" }, [
+                          _vm._v("In Stock")
+                        ])
+                      ])
+                    : _c("p", { staticClass: "card-text" }, [
+                        _c("small", { staticClass: "text-muted" }, [
+                          _vm._v("On Order")
+                        ])
+                      ])
+                ])
+              ]
+            )
           })
         )
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "card-text" }, [
-      _c("small", { staticClass: "text-muted" }, [
-        _vm._v("Last updated 3 mins ago")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
