@@ -47437,7 +47437,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-10 col-md-offset-2" }, [
+      _c("div", {}, [
         _c(
           "div",
           { staticClass: "row justify-content-center" },

@@ -65,8 +65,10 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="container py-4 col-sm-8">
+            <div class="row justify-content-center">
             @yield('content')
+            </div>
         </main>
     </div>
     <footer class="bg-dark text-light p-3 footer">

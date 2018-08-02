@@ -7,7 +7,7 @@
         </div>
         
         <div class="row justify-content-center">
-            <div class="col-md-10 col-md-offset-2">
+            <div class="">
                 <div class="row justify-content-center">        
                     <div class="card m-2" v-for="stones in filteredStones"  :key="stones.name" style="width: 30%;">
                         <img class="card-img-top" :src="stones.path" alt="material image" style="max-height:160px; overflow:hidden;">
