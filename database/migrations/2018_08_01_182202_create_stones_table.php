@@ -16,6 +16,7 @@ class CreateStonesTable extends Migration
         Schema::create('stones', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->text('description')->nullable();
             $table->string('path');
             $table->boolean('in_stock')->default(false);
             $table->string('color')->nullable();

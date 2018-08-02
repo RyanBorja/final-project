@@ -32,6 +32,16 @@ Route::get('/contact', function () {
     return view('public pages/contact');
 });
 
+Route::get('/althea', function () {
+    return view('auth/login');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/newstone', function(){
+    return view('admin/newstone');
+});
+
+Route::resource('/stones','StoneController');

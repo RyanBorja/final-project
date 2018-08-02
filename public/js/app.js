@@ -47447,12 +47447,12 @@ var render = function() {
               {
                 key: stones.name,
                 staticClass: "card m-2",
-                staticStyle: { width: "30%" }
+                staticStyle: { width: "230px" }
               },
               [
                 _c("img", {
                   staticClass: "card-img-top",
-                  staticStyle: { "max-height": "160px", overflow: "hidden" },
+                  staticStyle: { height: "160px", overflow: "hidden" },
                   attrs: { src: stones.path, alt: "material image" }
                 }),
                 _vm._v(" "),

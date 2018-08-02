@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <button type="button" class="btn btn-outline-primary"><a href="/newstone">Add a new stone card</a></button>
                 </div>
             </div>
         </div>
