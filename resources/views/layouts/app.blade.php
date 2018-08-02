@@ -10,12 +10,10 @@
 
     <title>{{ config('app.name', 'Quality Stone Countertops') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -33,8 +31,8 @@
         <nav class="navbar navbar-dark bg-dark mb-5">
             
             <!-- Branding Image -->
-            <a class="navbar-brand float-left pl-4" href="{{ route('welcome') }}">
-                <img src="{{ asset('logo/qsc_ball.png') }}" class="img-thumbnail" style="height: 200px">
+            <a class="navbar-brand float-left pl-4" href="{{ url('/') }}">
+                <img src="{{ asset('pictures/logo/qsc_ball.png') }}" class="img-thumbnail" style="height: 200px">
             </a>
 
             <!-- Collapsed Hamburger -->
@@ -53,11 +51,11 @@
                     </li>
                     <div class="dropdown-divider"></div>
                     <li class="nav-item">
-                        <a class="nav-link {{Request::is('portfolio') ? 'active' : ''}}" href="/portfolio">Portfolio</a>
+                        <a class="nav-link {{Request::is('portfolio') ? 'active' : ''}}" href="{{ url('/portfolio') }}">Portfolio</a>
                     </li>
                     <div class="dropdown-divider"></div>
                     <li class="nav-item">
-                        <a class="nav-link {{Request::is('materials') ? 'active' : ''}}" href="{{ route('materials') }}">Materials</a>
+                        <a class="nav-link {{Request::is('materials') ? 'active' : ''}}" href="{{ url('/materials') }}">Materials</a>
                     </li>
                     <div class="dropdown-divider"></div>
                     <li class="nav-item">
@@ -72,9 +70,12 @@
         </main>
     </div>
     <footer class="bg-dark text-light p-3 footer">
-        <p><a href="{{ route('contact') }}">Contact us</a></p>
+        <p><a href="{{ url('/contact') }}">Contact us</a></p>
         <p>Hours: Mon-Fri 8am to 5p, Sat by appointment, Sun closed</p>
         <p>Location: 1008 S Main Street Nicholasville, KY  40356</p>
     </footer>
+    
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

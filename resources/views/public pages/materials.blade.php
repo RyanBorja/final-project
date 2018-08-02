@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('layouts.card')
+@section('content')
     
-<stoneSelector></stoneSelector>
+<stone-selector :stone-data='{{ $stones->toJson() }}'></stone-selector>
 @endsection

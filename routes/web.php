@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingContent/welcome');
 });
 
 Route::get('/about', function () {
@@ -24,12 +24,13 @@ Route::get('/portfolio', function () {
 });
 
 Route::get('/materials', function () {
-    return view('public pages/materials');
-})->name('materials');
+    $stones = \App\Stone::orderBy('name')->get();
+    return view('public pages/materials', compact('stones'));
+});
 
 Route::get('/contact', function () {
     return view('public pages/contact');
-})->name('contact');
+});
 
 Auth::routes();
 
