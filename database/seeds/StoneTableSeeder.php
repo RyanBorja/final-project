@@ -22,6 +22,7 @@ class StoneTableSeeder extends Seeder
 	    	DB::table('stones')->insert([
                 'name' => $name,
                 'path' => '/pictures/materials/'.strtolower(str_replace(" ","_",$name)).'.jpg',
+                'deletePath' => '/public/materials/'.strtolower(str_replace(" ","_",$name)).'.jpg',
 	    		'in_stock' => false,
 	    		'created_at' => Carbon::now(),
 	    		'updated_at' => Carbon::now()
@@ -33,6 +34,7 @@ class StoneTableSeeder extends Seeder
             DB::table('stones')->insert([
                 'name' => $stock,
                 'path' => '/pictures/materials/'.strtolower(str_replace(" ","_",$stock)).'.jpg',
+                'deletePath' => '/public/materials/'.strtolower(str_replace(" ","_",$name)).'.jpg',
 	    		'in_stock' => true,
 	    		'created_at' => Carbon::now(),
 	    		'updated_at' => Carbon::now()

@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('stone-selector', require('./components/stoneSelector.vue'));
+Vue.component('stone-manager', require('./components/stoneManager.vue'));
 
 const app = new Vue({
     el: '#app'

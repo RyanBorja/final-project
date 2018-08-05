@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <button type="button" class="btn btn-outline-primary"><a href="/newstone">Add a new stone card</a></button>
+                    <div class="p-2">
+                        <a href="/newstone" class="text-white"><button type="button" class="btn btn-success btn-lg btn-block mb-3 m-2">Add a new stone card</button></a><br>
+                        <a href="/stones" class="text-white"><button type="button" class="btn btn-primary btn-lg btn-block mb-3 m-2">Edit stone cards</button></a><br>
+                    </div>
                 </div>
             </div>
         </div>

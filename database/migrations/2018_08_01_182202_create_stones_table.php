@@ -18,6 +18,7 @@ class CreateStonesTable extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->string('path');
+            $table->string('deletePath');
             $table->boolean('in_stock')->default(false);
             $table->string('color')->nullable();
             $table->string('type')->nullable();

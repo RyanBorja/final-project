@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class StoneController extends Controller
 {
@@ -13,7 +14,8 @@ class StoneController extends Controller
      */
     public function index()
     {
-        //
+        $stones = \App\Stone::orderBy('name')->get();
+        return view('admin/manage', compact('stones'));
     }
 
     /**
@@ -35,14 +37,16 @@ class StoneController extends Controller
     public function store(Request $request)
     {
         $image = $request->file('image');
-        $destinationPath = public_path('/pictures/materials');
-        $image->move($destinationPath);
+        $imageName = $image->getClientOriginalName();
+        $destinationPath = '/public/pictures/materials';
+        $image->storeAs($destinationPath,$imageName);
 
         $input = $request->input();
         $stone = new \App\Stone;
         $stone->name = $input['stoneName'];
         $stone->description = $input['stoneDescription'];
-        $stone->path = $image->getClientOriginalName();
+        $stone->path = 'storage/pictures/materials/'.$imageName;
+        $stone->deletePath = $destinationPath.'/'.$imageName;
         $stone->in_stock = (array_key_exists('isStock', $input)) ? '1' : '0';
 
         $stone->save();
@@ -69,7 +73,15 @@ class StoneController extends Controller
      */
     public function edit($id)
     {
-        //
+        $stone = \App\Stone::find($id);
+
+        if ( old('_token') ) {
+            $stone->name = old('stoneName');
+            $stone->description = old('stoneDescription');
+            $stone->in_stock = old('isStock') ? '1' : '0';
+        }
+
+        return view('admin.edit', compact('stone'));
     }
 
     /**
@@ -81,7 +93,26 @@ class StoneController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->input();
+        $stone = \App\Stone::find($id);
+        $stone->name = $input['stoneName'];
+        $stone->description = $input['stoneDescription'];
+        $stone->in_stock = (array_key_exists('isStock', $input)) ? '1' : '0';
+        
+        $imageDelete= $stone->deletePath;
+        if($request->file('newImage')){ 
+            Storage::delete($imageDelete);
+            $image = $request->file('newImage');
+            $imageName = $image->getClientOriginalName();
+            $destinationPath = '/public/pictures/materials';
+            $image->storeAs($destinationPath,$imageName);
+            $stone->path = 'storage/pictures/materials/'.$imageName;
+            $stone->deletePath= '/public/pictures/materials/'.$imageName;
+        }
+        
+        $stone->save();
+        $request->session()->flash('status', 'stone updated!');
+        return redirect()->route('stones.index');
     }
 
     /**
@@ -90,8 +121,19 @@ class StoneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $stone = \App\Stone::find($id);
+        
+        // Delete the image in storage tied to the stone card
+        $imageDelete= $stone->deletePath;
+        Storage::delete($imageDelete);
+
+        // Delete the stone card
+        $stone->delete();
+
+        // Let the user know the stone card was deleted
+        $request->session()->flash('status', 'Stone card deleted!');
+        return redirect()->route('stones.index');
     }
 }

@@ -2,8 +2,11 @@
 
 @section('content')
 
+	
+
 	<form method="post" action="/stones" enctype="multipart/form-data">
 		@csrf
+		<a href="/home" class="btn btn-secondary mb-5">Go back</a>
 
 		<div class="form-group">
 			<label for="name">Stone Name</label>
