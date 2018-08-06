@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Quality Stone Countertops') }}</title>
-
+    <link rel="shortcut icon" type="image/png" href="{{ asset('favicon3.png') }}"/>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
@@ -58,9 +58,19 @@
         </main>
     </div>
     <footer class="bg-dark text-light p-3 footer">
-        <p><a href="{{ url('/contact') }}">Contact us</a></p>
-        <p>Hours: Mon-Fri 8am to 5p, Sat by appointment, Sun closed</p>
-        <p>Location: 1008 S Main Street Nicholasville, KY  40356</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-2 justify-content-start">
+                    <a href="{{ url('/contact') }}">Contact us</a> 
+                </div>
+                <div class="col-6 text-center">
+                    Hours: Mon-Fri 8am to 5p, Sat by appointment, Sun closed
+                </div>
+                <div class="col-4 justify-content-end">
+                    Location: 1008 S Main Street Nicholasville, KY  40356
+                </div>
+            </div>
+        </div>    
     </footer>
     
     <!-- Scripts -->

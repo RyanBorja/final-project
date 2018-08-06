@@ -6,7 +6,7 @@
 		@csrf
 		@method('PUT')
 
-		<a href="/stones" class="btn btn-secondary mb-5">Go back</a>
+		<a href="/stones" class="btn btn-secondary my-3">Go back</a>
 
 		<div class="form-group">
 			<label for="name">Stone Name</label>
@@ -24,12 +24,16 @@
 		</div>
 
 		<img src="{{ url($stone->path) }}" alt="material image" style="height:160px; overflow:hidden;"><br>
-		
-		
-		<input class="mt-1" type="file" name="newImage" id="newImage"/><br>
-		<a href="/stones" class="btn btn-secondary mt-5">Cancel</a>
-		<button class="btn btn-primary mt-5" type="submit">Save</button>
-		
+			
+		<div class="text-left mt-3 p-4 border border-secondary">
+			<label for="newImage">Replace the old photo here</label><br>
+			<input type="file" name="newImage" id="newImage"/><br>
+		</div>
+
+		<div class=" mt-4 mb-4">
+			<a href="/stones" class="btn btn-secondary mr-5 p-3 px-5">Cancel</a>
+			<button class="btn btn-primary ml-5 p-3 px-5" type="submit">Save</button>
+		</div>
 	</form>
 
 @endsection

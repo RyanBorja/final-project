@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
-<a href="/home" class="btn btn-secondary mb-5">Go back to dashboard</a>
-
+<div class="col-12">
+    <a href="/home" class="btn btn-secondary my-3">Go back to dashboard</a>
+</div>
 <stone-manager :stone-data='{{ $stones->toJson() }}'></stone-manager>
 
 @endsection
