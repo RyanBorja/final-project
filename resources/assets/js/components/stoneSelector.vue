@@ -10,7 +10,7 @@
             <div class="">
                 <div class="row justify-content-center">        
                     <div class="card m-2" v-for="stones in filteredStones"  :key="stones.name" style="max-width: 330px;">
-                        <img class="card-img-top bg-dark" :src="stones.path" alt="material image" style="max-height:280px; object-fit: contain;">
+                        <img class="card-img-top bg-dark" :src="stones.path" alt="material image" style="height:280px; object-fit: contain;">
                         <div class="card-body">
                             <h5 class="card-title">{{ stones.name }}</h5> 
                             <p v-if="stones.in_stock" class="card-text"><small class="text-muted">In Stock</small></p>

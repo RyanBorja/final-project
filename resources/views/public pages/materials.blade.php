@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    
-<stone-selector :stone-data='{{ $stones->toJson() }}'></stone-selector>
+<div class="mt-3">
+    <stone-selector :stone-data='{{ $stones->toJson() }}'></stone-selector>
+</div>
 @endsection

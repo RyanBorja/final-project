@@ -6,7 +6,7 @@
             <h2 class="card-title text-center">What our customers are saying about us!</h2>
         @endslot
         @slot('cardBody')
-        <div class="card-body mx-auto" style="min-height:250px;">
+        <div class="row justify-content-center align-items-center heightfix">
             <div id="customerBlurbCarouselIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#customerBlurbCarouselIndicators" data-slide-to="0" class="active"></li>
@@ -14,9 +14,9 @@
                     <li data-target="#customerBlurbCarouselIndicators" data-slide-to="2"></li>
                 </ol>
 
-                <div class="carousel-inner mx-auto">
+                <div class="carousel-inner mx-auto heightfix">
                     <div class="carousel-item active">
-                        <p class="card-text mx-auto" style="width: 70%;">
+                        <p class="card-text mx-auto" style="width: 70%; padding-top: 10%;">
                             Hi Jennifer:<br>
                             
                             I am thankful Randy put me in touch with you.  You and Alex
@@ -34,37 +34,25 @@
                             Bonnie Cessna</p>
                     </div>
                     <div class="carousel-item">
-                        <p class="card-text mx-auto" style="width: 70%;">I am very happy with the job that Quality Stone did in replacing my 
-                            kitchen  countertops with their Oyster Pearl granite.  The gentlemen 
-                            were prompt and courteous.  They went the extra mile by coming over 
-                            twice to measure, making sure their templates were correct before 
-                            cutting the granite.  They were very willing to move large slabs of 
-                            granite as I tried to make up my mind.
-                            Jennifer Clifton was so very patient and accommodating as I shopped 
-                            for my choice of granite. She was invaluable in helping me select the 
-                            design and little added touches used in the travertine tile backsplash 
-                            behind my granite tops.  It was very helpful to have a knowledgeable 
-                            person to guide me through these selections.  
-                            I would surely recommend Quality Stone and Jennifer Clifton.
-                            
-                            Ginny Sisk</p>
+                        <p class="card-text mx-auto" style="width: 70%; padding-top: 10%;">I am very happy with the job that Quality Stone did in replacing my kitchen  countertops with their Oyster Pearl granite.  The gentlemen were prompt and courteous. They were very willing to move large slabs of granite as I tried to make up my mind. Jennifer Clifton was so very patient and accommodating as I shopped for my choice of granite. She was invaluable in helping me select the design and little added touches used in the travertine tile backsplash behind my granite tops.  It was very helpful to have a knowledgeable person to guide me through these selections. I would surely recommend Quality Stone and Jennifer Clifton.<br>
+                        Ginny Sisk</p>
                     </div>
                     <div class="carousel-item">
-                        <p class="card-text mx-auto" style="width: 70%;">Jennifer-
+                        <p class="card-text mx-auto" style="width: 70%; padding-top: 10%;">Jennifer-<br>
                             I can't thank you enough! The sink and countertop look great. I 
                             can't say enough good things. I really didn't expect Victor to get 
                             here and get it all installed so fast. It really worked out great. 
-                            Thank you, thank you, thank you....
+                            Thank you, thank you, thank you....<br>
                             Linzy</p>
                     </div>
                 </div>
 
                 <a class="carousel-control-prev" href="#customerBlurbCarouselIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark img-thumbnail border border-dark" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#customerBlurbCarouselIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon bg-dark img-thumbnail border border-dark" aria-hidden="true"></span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
@@ -108,11 +96,11 @@
                 </div>
 
                 <a class="carousel-control-prev" href="#beforeAfterCarouselIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark img-thumbnail border border-dark" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#beforeAfterCarouselIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon bg-dark img-thumbnail border border-dark" aria-hidden="true"></span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>

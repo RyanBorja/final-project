@@ -20,53 +20,39 @@
 </head>
 <body>
     <div id="app">
-        <!-- Page-subtop Navbar -->
+        <!-- Page-top Navbar -->
         <nav class="text-center my-3">
             <a class="fa fa-phone text-secondary"href="tel:859-338-8890">
             (859) 338-8890
             </a>
         </nav>
-        
         <!-- Page-subtop Navbar -->
-        <nav class="navbar navbar-dark bg-dark mb-5">
-            
-            <!-- Branding Image -->
-            <a class="navbar-brand float-left pl-4" href="{{ url('/') }}">
-                <img src="{{ asset('pictures/logo/qsc_ball.png') }}" class="img-thumbnail" style="height: 200px">
-            </a>
-
-            <!-- Collapsed Hamburger -->
-            <button class="navbar-toggler justify-content-end mr-4" type="button" data-toggle="collapse" data-target="#app-navbar-collapse" aria-controls="app-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('pictures/logo/logo.png') }}" class="navbar-brand img-thumbnail" style="height:50px; object-fit: contain;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- right Side Of Navbar -->
-                <ul class="navbar-nav mx-5 mt-2">
-                    <!-- <li class="nav-item ">
-                        <a class="nav-link {{Request::is('/') ? 'active' : ''}}" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link {{Request::is('about') ? 'active' : ''}}" href="{{ url('/about') }}">About</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item {{Request::is('about') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{ url('/about') }}">About <span class="sr-only">(current)</span></a>
                     </li>
-                    <div class="dropdown-divider"></div>
-                    <li class="nav-item">
-                        <a class="nav-link {{Request::is('portfolio') ? 'active' : ''}}" href="{{ url('/portfolio') }}">Portfolio</a>
+                    <li class="nav-item {{Request::is('portfolio') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{ url('/portfolio') }}">Portfolio</a>
                     </li>
-                    <div class="dropdown-divider"></div>
-                    <li class="nav-item">
-                        <a class="nav-link {{Request::is('materials') ? 'active' : ''}}" href="{{ url('/materials') }}">Materials</a>
+                    <li class="nav-item {{Request::is('materials') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{ url('/materials') }}">Materials</a>
                     </li>
-                    <div class="dropdown-divider"></div>
-                    <li class="nav-item">
-                        <a class="nav-link {{Request::is('contact') ? 'active' : ''}}" href="{{ url('/contact') }}">Contact Us</a>
+                    <li class="nav-item {{Request::is('contact') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </nav>
+        {{-- <a class="nav-link " href=""></a> --}}
 
-        <main class="container py-4 col-sm-8">
-            <div class="row justify-content-center">
+        <main class="container-fluid justify-content-center">
+            <div class="row justify-content-center text-center">
             @yield('content')
             </div>
         </main>

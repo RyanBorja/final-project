@@ -47453,10 +47453,7 @@ var render = function() {
               [
                 _c("img", {
                   staticClass: "card-img-top bg-dark",
-                  staticStyle: {
-                    "max-height": "280px",
-                    "object-fit": "contain"
-                  },
+                  staticStyle: { height: "280px", "object-fit": "contain" },
                   attrs: { src: stones.path, alt: "material image" }
                 }),
                 _vm._v(" "),
