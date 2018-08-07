@@ -53,9 +53,8 @@
 @endcomponent             
 
 @component('layouts.card')
-    
-    <div class="row justify-content-center align-items-center">
-        <div class="col-6 align-items-center">
+    <div class="row justify-content-end align-items-center">
+        <div class="col-3 row justify-content-end">
             <div class="list-group" id="list-tab" role="tablist">
             <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Alga Green</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Black Galaxy</a>
@@ -63,7 +62,7 @@
             <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Typhoon Gold</a>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center col-6">
+        <div class="row justify-content-center align-items-center col-9">
             <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                 <img class="card-img-bottom heightfix" src="{{ asset('pictures/Alga_Green.jpg') }}" alt="Card image Alga Green">
@@ -118,5 +117,9 @@
         </div>  
     @endslot
 @endcomponent       
+
+@component('layouts.card')
+    <a href="{{ url('/materials') }}" style=""><img class="heightfix img-thumbnail" src="{{ asset('pictures/productSelector.jpg') }}" alt="product selector link"></a>
+@endcomponent
 
 @endsection
