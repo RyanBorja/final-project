@@ -47355,17 +47355,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
@@ -47390,25 +47379,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             var stones_array = this.stoneData;
             var search_string = this.searchString.toLowerCase();
-            var green = stones_array.filter(function (item) {
-                if (item.color == 'green') {
-                    return item;
-                }
-            });
-            var granite = stones_array.filter(function (item) {
-                if (item.type == 'granite') {
-                    return item;
-                }
-            });
-            var inStock = stones_array.filter(function (item) {
-                if (item.in_stock == true) {
-                    return item;
-                }
-            });
 
-            if (isGreen) {
-                return green;
-            }
             if (!search_string) {
                 return stones_array;
             }
@@ -47464,47 +47435,7 @@ var render = function() {
             _vm.searchString = $event.target.value
           }
         }
-      }),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "btn-group btn-group-toggle mt-3",
-          attrs: { "data-toggle": "buttons" }
-        },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("label", { staticClass: "btn btn-secondary" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.isGreen,
-                  expression: "isGreen"
-                }
-              ],
-              attrs: {
-                value: "true",
-                type: "radio",
-                name: "isGreen",
-                id: "isGreenFlag",
-                autocomplete: "off"
-              },
-              domProps: { checked: _vm._q(_vm.isGreen, "true") },
-              on: {
-                change: function($event) {
-                  _vm.isGreen = "true"
-                }
-              }
-            }),
-            _vm._v(" Green\n            ")
-          ]),
-          _vm._v(" "),
-          _vm._m(1)
-        ]
-      )
+      })
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row justify-content-center" }, [
@@ -47552,43 +47483,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "btn btn-secondary active" }, [
-      _c("input", {
-        attrs: {
-          value: "true",
-          type: "radio",
-          name: "isGranite",
-          id: "isGraniteFlag",
-          autocomplete: "off",
-          checked: ""
-        }
-      }),
-      _vm._v(" Granite\n            ")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "btn btn-secondary" }, [
-      _c("input", {
-        attrs: {
-          value: "true",
-          type: "radio",
-          name: "isStock",
-          id: "isStockFlag",
-          autocomplete: "off"
-        }
-      }),
-      _vm._v(" In Stock\n            ")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
