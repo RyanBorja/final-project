@@ -63,11 +63,14 @@
                 <div class="col-2 justify-content-start">
                     <a href="{{ url('/contact') }}">Contact us</a> 
                 </div>
-                <div class="col-6 text-center">
-                    Hours: Mon-Fri 8am to 5p, Sat by appointment, Sun closed
+                <div class="col-3 text-center">
+                    Mon-Fri 8am to 5pm
+                </div>
+                <div class="col-3 text-center">
+                    Sat by appointment
                 </div>
                 <div class="col-4 justify-content-end">
-                    Location: 1008 S Main Street Nicholasville, KY  40356
+                    1008 S Main Street Nicholasville, KY  40356
                 </div>
             </div>
         </div>    
