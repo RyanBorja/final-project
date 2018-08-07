@@ -21,14 +21,14 @@
 <body>
     <div id="app">
         <!-- Page-top Navbar -->
-        <nav class="text-center my-2">
+        <nav class="text-center my-1">
             <a class="fa fa-phone text-secondary"href="tel:859-338-8890">
             (859) 338-8890
             </a>
         </nav>
         <!-- Page-subtop Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('pictures/logo/logo.png') }}" class="navbar-brand img-thumbnail" style="max-height:50px; object-fit: contain;"></a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="height:40px;">
+            <a class="" href="{{ url('/') }}"><img src="{{ asset('pictures/logo/logo.png') }}" class="navbar-brand img-thumbnail" style="max-height:30px; object-fit: contain;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -64,10 +64,10 @@
                     <a href="{{ url('/contact') }}">Contact us</a> 
                 </div>
                 <div class="col-3 text-center">
-                    Mon-Fri 8am to 5pm
+                    Mon-Fri: 8am to 5pm 
                 </div>
                 <div class="col-3 text-center">
-                    Sat by appointment
+                    Sat: by appointment
                 </div>
                 <div class="col-4 justify-content-end">
                     1008 S Main Street Nicholasville, KY  40356
