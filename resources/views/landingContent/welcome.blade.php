@@ -1,18 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
+<div style="width:auto;height:auto;">
+    <img class="card-img-top" style="object-fit:contain;" src="{{ asset('pictures/landingimg.png') }}" alt="Card image kitchen">
+    {{-- <h3 class="text-center" style="font-style: italic; position:relative;"><strong>Quality</strong> lasts longer than the impulsive urge of <strong>Price</strong></h3> --}}
+</div>
+
+
+
 
 @component('layouts.card')
     @slot('cardHeader')
-        <h3 class="text-center" style="font-style: italic;">The aftermath of <strong>Quality</strong> lasts longer than the impulsive urge of <strong>Price</strong></h3>
-    @endslot
-    @slot('cardBody')
         <h1 class="card-title text-center"><a href="{{ url('/about') }}">Who we are</a></h1>
         <h3 class="card-text text-muted text-center pb-2">“Our mission is to turn your design needs into a reality”</h3>
+    @endslot
+    @slot('cardBody')
         <p class="card-text text-center mx-auto" style="width:70%;">Allow us to expertly aid you in your kitchen, bathroom, and bar renovation needs.  Our excellent customer service, fabrication expertise, and gorgeous selection of stone materials combine to guarantee your satisfaction.</p>
     @endslot
     @slot('cardImg')
-        <img class="card-img-bottom heightfix" src="{{ asset('pictures/jumbotronimg.jpeg') }}" alt="Card image kitchen">
+        <img class="heightfix" src="{{ asset('pictures/jumbotronimg.jpeg') }}" alt="Card image kitchen">
     @endslot
 @endcomponent
 

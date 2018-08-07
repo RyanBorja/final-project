@@ -21,14 +21,14 @@
 <body>
     <div id="app">
         <!-- Page-top Navbar -->
-        <nav class="text-center my-3">
+        <nav class="text-center my-2">
             <a class="fa fa-phone text-secondary"href="tel:859-338-8890">
             (859) 338-8890
             </a>
         </nav>
         <!-- Page-subtop Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('pictures/logo/logo.png') }}" class="navbar-brand img-thumbnail" style="height:50px; object-fit: contain;"></a>
+            <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('pictures/logo/logo.png') }}" class="navbar-brand img-thumbnail" style="max-height:50px; object-fit: contain;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
